@@ -53,7 +53,16 @@ class Courses extends Component {
                             if (courses[course_keys[_i_key]]['id'] == choosedCourseId) course_data = { ...courses[course_keys[_i_key]] }
                         });
 
-                        return (<Course course_data={course_data} />);
+                        let course_jsx = <Course course_data={course_data} />;
+
+                        console.log(Object.keys(course_data).length);
+
+                        if(!Object.keys(course_data).length)
+                        {
+                            course_jsx = (<div style={{color:'rgb(183, 117, 117)',fontSize:'14px',flex:1}} >Oops! The Course your are looking for is not found! ...</div>);
+                        }
+
+                        return (course_jsx);
 
                     }} />
                     <Route render={() => courses_content_jsx} />
