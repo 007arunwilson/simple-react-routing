@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Link, NavLink, Switch } from 'react-router-dom';
+import { Route, Link, NavLink, Switch,Redirect } from 'react-router-dom';
 
 import Courses from './containers/Courses/Courses';
 import Users from './containers/Users/Users';
@@ -75,6 +75,8 @@ class App extends Component {
 
             }} />
 
+            <Redirect from="/all-courses" to="/courses" />
+
             <Route render={() => {
 
               return (
@@ -89,6 +91,7 @@ class App extends Component {
               )
 
             }} />
+
             </Switch>
           </div>
 
