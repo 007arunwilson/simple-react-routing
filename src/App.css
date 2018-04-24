@@ -1,5 +1,7 @@
 .answer-section { background-color:#fbfbfb; padding: 20px 10px; }
 
-ul.plinks-ul {    list-style: none;    border-bottom: 1px solid #e6e6e6; }
-ul.plinks-ul li {    display: inline-block;    padding: 2px 4px;    background: #f5f5f5;    margin: 2px 8px;    }
-ul.plinks-ul li a { padding: 2px 4px; }
+ul.plinks-ul { list-style: none;    border-bottom: 1px solid #e6e6e6; }
+ul.plinks-ul li { display: inline-block;    padding: 2px 4px;    background: #f5f5f5;    margin: 2px 8px;    }
+ul.plinks-ul li a { padding: 2px 16px;    text-decoration: none;    color: #000; }
+ul.plinks-ul li a:hover { background-color: #fff; }
+ul.plinks-ul li a.link-active {    border-bottom: 2px solid #d6d6d6;    background: #fff;   }
